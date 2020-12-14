@@ -4,6 +4,7 @@ $(document).ready(function(){
       e.preventDefault();
       $(this).parent().find('ul').slideToggle(700);
     });
+
     //swipper 效果
     var mySwiper = new Swiper('.swiper-container', {
         // Optional parameters
@@ -19,18 +20,24 @@ $(document).ready(function(){
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         },
+        //自動輪播
+        autoplay: {
+          delay: 3000,
+        },
       });
+
       //燈箱效果
       lightbox.option({
         'resizeDuration': 200,
         'wrapAround': true,
         
       })
+      
       //top 效果
       $('.top a').click(function(e) {
         e.preventDefault();
         $('html,body').animate({
           scrollTop: 0
         }, 700);
-        });
+      });
 });
