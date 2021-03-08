@@ -34,6 +34,20 @@ $(document).ready(function(){
       })
       
       //top 效果
+      
+
+      $(window).scroll(function(){
+
+        if($(this).scrollTop() > 60){
+        
+        $('.top a').fadeIn();
+        
+        } 
+        else{
+        $('.top a').fadeOut();
+        }
+      });
+
       $('.top a').click(function(e) {
         e.preventDefault();
         $('html,body').animate({
